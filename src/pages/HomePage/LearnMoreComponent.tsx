@@ -44,7 +44,7 @@ export function LearnMoreComponent({
       p={20}
     >
       <div ref={ref}>
-        <Title ta="center" c={'gray.8'} mt={70}>
+        <Title ta="center" mt={70}>
           How AI Model Match Transforms AI Experimentation
         </Title>
         <Grid maw={1200} gutter={'xl'} mt={50}>
