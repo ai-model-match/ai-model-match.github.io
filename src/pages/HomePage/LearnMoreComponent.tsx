@@ -37,15 +37,14 @@ export function LearnMoreComponent({
   return (
     <Flex
       ref={targetScrollRef}
-      justify="center"
-      align="center"
       mih="100vh"
       miw={'100%'}
-      bg={'#d5d5d525'}
-      p={100}
+      justify={'center'}
+      align={'flex-start'}
+      p={20}
     >
-      <div ref={ref} style={{ height: '735px' }}>
-        <Title ta="center" c={'gray.8'}>
+      <div ref={ref}>
+        <Title ta="center" c={'gray.8'} mt={70}>
           How AI Model Match Transforms AI Experimentation
         </Title>
         <Grid maw={1200} gutter={'xl'} mt={50}>
@@ -134,7 +133,7 @@ export function LearnMoreComponent({
             </Transition>
           </Grid.Col>
         </Grid>
-        <Group gap={40} mt={70} justify="center">
+        <Group gap={40} mt={70} mb={30} justify="center">
           <Transition
             mounted={isComponentVisible}
             transition="fade"
@@ -164,7 +163,7 @@ export function LearnMoreComponent({
             mounted={isComponentVisible}
             transition="fade"
             duration={800}
-            enterDelay={1500}
+            enterDelay={1400}
             timingFunction="ease"
           >
             {(styles) => (

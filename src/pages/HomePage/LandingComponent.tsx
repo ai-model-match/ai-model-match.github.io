@@ -1,4 +1,4 @@
-import { Button, Center, Flex, Group, Stack, Text, Transition } from '@mantine/core';
+import { Box, Button, Flex, Group, Stack, Text, Transition } from '@mantine/core';
 import { useInViewport } from '@mantine/hooks';
 import { assets } from '@styles/assets';
 import { IconArrowDown, IconBrandDocker } from '@tabler/icons-react';
@@ -27,24 +27,32 @@ export function LandingComponent({
   return (
     <Flex
       ref={ref}
-      justify="center"
-      align="center"
       bg="var(--aimm-gradient-bg)"
       mih="100vh"
       miw={'100%'}
+      justify={'center'}
+      align={'flex-start'}
       p={0}
-      style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.4)' }}
+      style={{
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.4)',
+      }}
     >
-      <Center
+      <Box
         w={'100%'}
-        h={'100vh'}
+        mih={'100vh'}
         style={{
           backgroundImage: "url('pattern.svg')",
           backgroundRepeat: 'repeat',
           backgroundPosition: '0 0',
         }}
       >
-        <Stack align="center" p={50} maw={800}>
+        <Stack
+          align="center"
+          p={50}
+          maw={{ xs: '100%', sm: 800 }}
+          mt={{ xs: 20, sm: 50 }}
+          mx={'auto'}
+        >
           <Transition
             mounted={isComponentVisible}
             transition="slide-up"
@@ -63,8 +71,20 @@ export function LandingComponent({
                   }}
                 />
                 <Text
+                  visibleFrom="sm"
                   style={{ ...styles, letterSpacing: '-1.5px', marginTop: 30 }}
-                  size="84px"
+                  size={'72px'}
+                  ta="center"
+                  fw={500}
+                  variant="gradient"
+                  gradient={{ from: '#9b9b9bff', to: '#ffffffff', deg: 45 }}
+                >
+                  AI Model Match
+                </Text>
+                <Text
+                  hiddenFrom="sm"
+                  style={{ ...styles, letterSpacing: '-1.5px', marginTop: 30 }}
+                  size={'64px'}
                   ta="center"
                   fw={500}
                   variant="gradient"
@@ -83,17 +103,32 @@ export function LandingComponent({
             timingFunction="ease"
           >
             {(styles) => (
-              <Text
-                maw={550}
-                size="24px"
-                style={{ ...styles, lineHeight: 1.3, marginTop: 30 }}
-                ta="center"
-                fw={400}
-                c="#FFFFFF7A"
-              >
-                Continuously optimize AI-driven experiences by testing, learning, and
-                selecting the best strategies automatically.
-              </Text>
+              <>
+                <Text
+                  visibleFrom="sm"
+                  maw={550}
+                  size="24px"
+                  style={{ ...styles, lineHeight: 1.3, marginTop: 30 }}
+                  ta="center"
+                  fw={400}
+                  c="#FFFFFF7A"
+                >
+                  Continuously optimize AI-driven experiences by testing, learning, and
+                  selecting the best strategies automatically.
+                </Text>
+                <Text
+                  hiddenFrom="sm"
+                  maw={'100%'}
+                  size="22px"
+                  style={{ ...styles, lineHeight: 1.3, marginTop: 30 }}
+                  ta="center"
+                  fw={400}
+                  c="#FFFFFF7A"
+                >
+                  Continuously optimize AI-driven experiences by testing, learning, and
+                  selecting the best strategies automatically.
+                </Text>
+              </>
             )}
           </Transition>
 
@@ -127,7 +162,7 @@ export function LandingComponent({
               mounted={isComponentVisible}
               transition="fade-up"
               duration={800}
-              enterDelay={1000}
+              enterDelay={950}
               timingFunction="ease"
             >
               {(styles) => (
@@ -156,7 +191,7 @@ export function LandingComponent({
             </Transition>
           </Group>
         </Stack>
-      </Center>
+      </Box>
     </Flex>
   );
 }
