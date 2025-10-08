@@ -58,6 +58,10 @@ export default [
               group: 'internal',
             },
             {
+              pattern: 'components',
+              group: 'internal',
+            },
+            {
               pattern: 'pages',
               group: 'internal',
             },

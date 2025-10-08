@@ -46,10 +46,6 @@ export const mantineTheme: MantineThemeOverride = createTheme({
     ],
   },
   other: {
-    darkBgGradientBgStart: '#099268',
-    darkBgGradientBgEnd: '#0b525b',
-    lightBgGradientBgStart: '#35a785ff',
-    lightBgGradientBgEnd: '#29707aff',
     bpPaperDark: '#252525',
     bpPaperLight: '#efefef',
   },
@@ -184,17 +180,13 @@ export const cssVariablesResolver: CSSVariablesResolver = (theme) => ({
   light: {
     '--aimm-svg-color': theme.colors.brand[7],
     '--aimm-bg-paper': theme.other.bpPaperLight,
-    '--aimm-gradient-bg-start': theme.other.lightBgGradientBgStart,
-    '--aimm-gradient-bg-end': theme.other.lightBgGradientBgEnd,
-    '--aimm-gradient-bg': `linear-gradient(135deg, ${theme.other.lightBgGradientBgStart} 0%, ${theme.other.lightBgGradientBgEnd} 70%)`,
+    '--aimm-gradient-bg': `linear-gradient(60deg, #1fa984ff 0%, #2A7262ff 20%, #151326ff 62%, #1b244bff 100%)`,
     '--aimm-segmented-control-bg': theme.white,
   },
   dark: {
     '--aimm-svg-color': theme.colors.brand[7],
     '--aimm-bg-paper': theme.other.bpPaperDark,
-    '--aimm-gradient-bg-start': theme.other.darkBgGradientBgStart,
-    '--aimm-gradient-bg-end': theme.other.darkBgGradientBgEnd,
-    '--aimm-gradient-bg': `linear-gradient(135deg, ${theme.other.darkBgGradientBgStart} 0%, ${theme.other.darkBgGradientBgEnd} 70%)`,
+    '--aimm-gradient-bg': `linear-gradient(60deg, #1fa984ff 0%, #2A7262ff 20%, #151326ff 62%, #1b244bff 100%)`,
     '--aimm-segmented-control-bg': theme.colors.dark[6],
   },
 });
