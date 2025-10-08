@@ -16,14 +16,14 @@ export function HomePage() {
       <LandingComponent
         onLearnMoreClick={scrollToLearnMore}
         onGetStartedClick={() =>
-          window.open('https://hub.docker.com/repositories/aimodelmatch', '_blank')
+          window.open('https://hub.docker.com/u/aimodelmatch', '_blank')
         }
       />
       <LearnMoreComponent
         targetScrollRef={learnMoreRef}
         onSendEmailClick={() => window.open('mailto:lory.castelli+modelmatch@gmail.com')}
         onSeeGithubClick={() =>
-          window.open('https://github.com/ai-model-match?tab=repositories', '_blank')
+          window.open('https://github.com/ai-model-match', '_blank')
         }
       />
     </Container>
