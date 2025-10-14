@@ -45,7 +45,7 @@ export function LearnMoreComponent({
     >
       <div ref={ref}>
         <Title ta="center" mt={70}>
-          How AI Model Match Transforms AI Experimentation
+          How AIMM supports new AI Experiences
         </Title>
         <Grid maw={1200} gutter={'xl'} mt={50}>
           <Grid.Col span={{ base: 12, md: 6, lg: 4 }}>
@@ -63,14 +63,15 @@ export function LearnMoreComponent({
                   </Card.Section>
 
                   <Group justify="space-between" mt="md" mb="xs">
-                    <Text fw={600}>Automate and Accelerate AI Experimentation</Text>
+                    <Text fw={600}>1. Automate AI Experiences Rollout</Text>
                   </Group>
 
                   <Text c="dimmed">
-                    AI Model Match replaces manual prompt testing with intelligent
-                    automation. Define your use cases, launch multiple strategies flows,
-                    and let the system automatically distribute traffic and collect
-                    performance data, so you can focus on innovation, not guesswork.
+                    AI Model Match supports automatic release of new Prompt Pipelines in
+                    production. Define your use case, choose the candidate Prompts , and
+                    let the system automatically distribute traffic and collect
+                    performance data, so you can focus on creating innovative AI
+                    experiences instead of testing.
                   </Text>
                 </Card>
               )}
@@ -91,14 +92,14 @@ export function LearnMoreComponent({
                   </Card.Section>
 
                   <Group justify="space-between" mt="md" mb="xs">
-                    <Text fw={600}>Optimize with Real-World Feedback</Text>
+                    <Text fw={600}>2. Optimize with Real-World Feedback</Text>
                   </Group>
 
                   <Text c="dimmed">
                     Every user interaction becomes a learning opportunity. AI Model Match
-                    aggregates ratings and feedback to continuously refine which flows
-                    perform best. As real users engage, the system adapts, promoting
-                    high-performing configurations automatically.
+                    aggregates synthetic scores and feedback to continuously refine which
+                    flows perform best. As real users engage, the system adapts, promoting
+                    high-performing Prompt Pipelines automatically.
                   </Text>
                 </Card>
               )}
@@ -119,12 +120,12 @@ export function LearnMoreComponent({
                   </Card.Section>
 
                   <Group justify="space-between" mt="md" mb="xs">
-                    <Text fw={600}>Empower Teams to Deliver Better AI Experiences</Text>
+                    <Text fw={600}>3. Empower Team to Deliver Better AI Experiences</Text>
                   </Group>
 
                   <Text c="dimmed">
-                    Product managers and developers can experiment safely without heavy
-                    engineering overhead. With built-in rollout control, automatic
+                    AI Product Managers and AI Engineers can experiment safely without
+                    heavy engineering overhead. With built-in rollout control, automatic
                     rollback, and transparent analytics, your team can deliver smarter,
                     more reliable AI experiences, faster than ever.
                   </Text>

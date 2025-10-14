@@ -107,14 +107,25 @@ export function LandingComponent({
                 <Text
                   visibleFrom="sm"
                   maw={550}
-                  size="24px"
+                  size="28px"
                   style={{ ...styles, lineHeight: 1.3, marginTop: 30 }}
+                  ta="center"
+                  fw={600}
+                  c="#FFFFFF7A"
+                >
+                  You innovate. We orchestrate.
+                </Text>
+                <Text
+                  visibleFrom="sm"
+                  maw={500}
+                  size="20px"
+                  style={{ ...styles, lineHeight: 1.3, marginTop: 10 }}
                   ta="center"
                   fw={400}
                   c="#FFFFFF7A"
                 >
-                  Continuously optimize AI-driven experiences by testing, learning, and
-                  selecting the best strategies automatically.
+                  Focus on new AI experiences while AI Model Match chooses the best prompt
+                  pipelines for you.
                 </Text>
                 <Text
                   hiddenFrom="sm"
