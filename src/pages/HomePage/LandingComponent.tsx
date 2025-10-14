@@ -84,7 +84,7 @@ export function LandingComponent({
                 <Text
                   hiddenFrom="sm"
                   style={{ ...styles, letterSpacing: '-1.5px', marginTop: 30 }}
-                  size={'64px'}
+                  size={'54px'}
                   ta="center"
                   fw={500}
                   variant="gradient"
@@ -125,19 +125,30 @@ export function LandingComponent({
                   c="#FFFFFF7A"
                 >
                   Focus on new AI experiences while AI Model Match chooses the best prompt
-                  pipelines for you.
+                  pipeline for you.
+                </Text>
+                <Text
+                  hiddenFrom="sm"
+                  maw={550}
+                  size="24px"
+                  style={{ ...styles, lineHeight: 1.3, marginTop: 30 }}
+                  ta="center"
+                  fw={600}
+                  c="#FFFFFF7A"
+                >
+                  You innovate. We orchestrate.
                 </Text>
                 <Text
                   hiddenFrom="sm"
                   maw={'100%'}
-                  size="22px"
+                  size="18px"
                   style={{ ...styles, lineHeight: 1.3, marginTop: 30 }}
                   ta="center"
                   fw={400}
                   c="#FFFFFF7A"
                 >
-                  Continuously optimize AI-driven experiences by testing, learning, and
-                  selecting the best strategies automatically.
+                  Focus on new AI experiences while AI Model Match chooses the best prompt
+                  pipeline for you.
                 </Text>
               </>
             )}

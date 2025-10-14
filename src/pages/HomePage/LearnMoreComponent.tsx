@@ -68,10 +68,10 @@ export function LearnMoreComponent({
 
                   <Text c="dimmed">
                     AI Model Match supports automatic release of new Prompt Pipelines in
-                    production. Define your use case, choose the candidate Prompts , and
-                    let the system automatically distribute traffic and collect
-                    performance data, so you can focus on creating innovative AI
-                    experiences instead of testing.
+                    production. Define your use case, choose candidate Prompts, and let
+                    the system automatically distribute traffic and collect performance
+                    data, so you can focus on creating innovative AI experiences instead
+                    of testing.
                   </Text>
                 </Card>
               )}
@@ -120,7 +120,7 @@ export function LearnMoreComponent({
                   </Card.Section>
 
                   <Group justify="space-between" mt="md" mb="xs">
-                    <Text fw={600}>3. Empower Team to Deliver Better AI Experiences</Text>
+                    <Text fw={600}>3. Empower Team to Deliver Faster</Text>
                   </Group>
 
                   <Text c="dimmed">
