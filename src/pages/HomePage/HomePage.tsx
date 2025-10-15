@@ -52,6 +52,9 @@ export function HomePage() {
         onSeeGithubClick={() =>
           window.open('https://github.com/ai-model-match', '_blank')
         }
+        onSupportUsClick={() =>
+          window.open('https://opencollective.com/ai-model-match', '_blank')
+        }
       />
       <ContactUsComponent targetScrollRef={contactUsRef} />
     </Container>

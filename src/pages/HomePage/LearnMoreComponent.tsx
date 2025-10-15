@@ -10,19 +10,21 @@ import {
   Transition,
 } from '@mantine/core';
 import { useInViewport } from '@mantine/hooks';
-import { IconBrandGithub, IconMail } from '@tabler/icons-react';
+import { IconBrandGithub, IconHeartDollar, IconMail } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 
 export interface LearnMoreComponentProps {
   targetScrollRef: React.Ref<HTMLDivElement>;
-  onSeeGithubClick?: () => void;
-  onSendEmailClick?: () => void;
+  onSeeGithubClick: () => void;
+  onSendEmailClick: () => void;
+  onSupportUsClick: () => void;
 }
 
 export function LearnMoreComponent({
   targetScrollRef,
   onSeeGithubClick,
   onSendEmailClick,
+  onSupportUsClick,
 }: LearnMoreComponentProps) {
   const { ref, inViewport } = useInViewport();
   const [isComponentVisible, setIsComponentVisible] = useState<boolean>(false);
@@ -157,6 +159,30 @@ export function LearnMoreComponent({
                 onClick={onSeeGithubClick}
               >
                 Be curious
+              </Button>
+            )}
+          </Transition>
+          <Transition
+            mounted={isComponentVisible}
+            transition="fade"
+            duration={800}
+            enterDelay={1400}
+            timingFunction="ease"
+          >
+            {(styles) => (
+              <Button
+                style={styles}
+                variant="filled"
+                color="blue"
+                h={80}
+                w={220}
+                fw={300}
+                size="lg"
+                radius={'80'}
+                rightSection={<IconHeartDollar color="#FFFFFF" size={36} stroke={1} />}
+                onClick={onSupportUsClick}
+              >
+                Support Us
               </Button>
             )}
           </Transition>
