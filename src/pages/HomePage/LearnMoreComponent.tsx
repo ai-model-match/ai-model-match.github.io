@@ -10,20 +10,20 @@ import {
   Transition,
 } from '@mantine/core';
 import { useInViewport } from '@mantine/hooks';
-import { IconBrandGithub, IconHeartDollar, IconMail } from '@tabler/icons-react';
+import { IconBrandGithub, IconHeartDollar, IconTargetArrow } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 
 export interface LearnMoreComponentProps {
   targetScrollRef: React.Ref<HTMLDivElement>;
   onSeeGithubClick: () => void;
-  onSendEmailClick: () => void;
+  onHowItWorksClick: () => void;
   onSupportUsClick: () => void;
 }
 
 export function LearnMoreComponent({
   targetScrollRef,
   onSeeGithubClick,
-  onSendEmailClick,
+  onHowItWorksClick,
   onSupportUsClick,
 }: LearnMoreComponentProps) {
   const { ref, inViewport } = useInViewport();
@@ -173,16 +173,16 @@ export function LearnMoreComponent({
               <Button
                 style={styles}
                 variant="filled"
-                color="blue"
+                color="brand"
                 h={80}
                 w={220}
                 fw={300}
                 size="lg"
                 radius={'80'}
-                rightSection={<IconHeartDollar color="#FFFFFF" size={36} stroke={1} />}
-                onClick={onSupportUsClick}
+                rightSection={<IconTargetArrow color="#FFFFFF" size={36} stroke={1} />}
+                onClick={onHowItWorksClick}
               >
-                Support Us
+                How It Works
               </Button>
             )}
           </Transition>
@@ -197,16 +197,16 @@ export function LearnMoreComponent({
               <Button
                 style={styles}
                 variant="filled"
-                color="brand"
+                color="blue"
                 h={80}
                 w={220}
                 fw={300}
                 size="lg"
                 radius={'80'}
-                rightSection={<IconMail color="#FFFFFF" size={36} stroke={1} />}
-                onClick={onSendEmailClick}
+                rightSection={<IconHeartDollar color="#FFFFFF" size={36} stroke={1} />}
+                onClick={onSupportUsClick}
               >
-                Contact Us
+                Support Us
               </Button>
             )}
           </Transition>

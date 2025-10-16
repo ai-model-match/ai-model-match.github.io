@@ -1,6 +1,7 @@
 import { Container } from '@mantine/core';
 import { useScrollIntoView } from '@mantine/hooks';
 import { ContactUsComponent } from './ContactUsComponent';
+import { HowItWorksComponent } from './HowItWorksComponent';
 import { LandingComponent } from './LandingComponent';
 import { LearnMoreComponent } from './LearnMoreComponent';
 
@@ -12,6 +13,12 @@ export function HomePage() {
     });
 
   const { scrollIntoView: scrollToContactUs, targetRef: contactUsRef } =
+    useScrollIntoView({
+      duration: 1500,
+      easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2),
+    });
+
+  const { scrollIntoView: scrollToHowItWorks, targetRef: howItWorksRef } =
     useScrollIntoView({
       duration: 1500,
       easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2),
@@ -48,13 +55,17 @@ export function HomePage() {
       />
       <LearnMoreComponent
         targetScrollRef={learnMoreRef}
-        onSendEmailClick={scrollToContactUs}
+        onHowItWorksClick={scrollToHowItWorks}
         onSeeGithubClick={() =>
           window.open('https://github.com/ai-model-match', '_blank')
         }
         onSupportUsClick={() =>
           window.open('https://opencollective.com/ai-model-match', '_blank')
         }
+      />
+      <HowItWorksComponent
+        targetScrollRef={howItWorksRef}
+        onSendEmailClick={scrollToContactUs}
       />
       <ContactUsComponent targetScrollRef={contactUsRef} />
     </Container>
